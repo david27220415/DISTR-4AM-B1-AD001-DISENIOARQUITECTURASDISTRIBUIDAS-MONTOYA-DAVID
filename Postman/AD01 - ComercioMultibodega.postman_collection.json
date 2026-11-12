@@ -1,0 +1,1421 @@
+{
+  "info": {
+    "_postman_id": "c56495c9-d0bf-4a10-9d91-989b0d3fdb22",
+    "name": "AD01 - ComercioMultibodega",
+    "description": "Colección para 3 API REST independientes. Ejecutar proyectos con perfil HTTPS (HTTP en 5001,5002,5003). Ajustar ID y claves externas según los datos reales. Los movimientos no modifican automáticamente stock.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57563832",
+    "_collection_link": "https://go.postman.co/collection/57563832-c56495c9-d0bf-4a10-9d91-989b0d3fdb22?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Catalogo",
+      "item": [
+        {
+          "name": "Listar Categorias",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Categorias",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Categorias"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Categorias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Categorias/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Categorias",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Categorias",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idCategoria\": 2,\n  \"nombre\": \"Computadoras\",\n  \"descripcion\": \"Equipos de computación\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Categorias",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Categorias"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Categorias",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idCategoria\": 2,\n  \"nombre\": \"Computadoras\",\n  \"descripcion\": \"Equipos de pruebas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Categorias/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Categorias",
+                "2"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Categorias",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Categorias/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Categorias",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Marcas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Marcas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Marcas"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Marcas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Marcas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Marcas",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Marcas",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idMarca\": 0,\n  \"nombre\": \"Lenovoo prueba\",\n  \"paisOrigen\": \"China\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Marcas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Marcas"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Marcas",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idMarca\": 2,\n  \"nombre\": \"Lenovo??\",\n  \"paisOrigen\": \"China-VIETNAM\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Marcas/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Marcas",
+                "2"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Marcas",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Marcas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Marcas",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Productos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Productos"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Productos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Productos",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Productos",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {
+              "content-type": true
+            }
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"idProducto\": 0,\r\n  \"idCategoria\": 1,\r\n  \"idMarca\": 1,\r\n  \"nombre\": \"Laptop Lenovo\",\r\n  \"sku\": \"LEN-001\",\r\n  \"precio\": 999.00,\r\n  \"estado\": true\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Productos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Productos"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Productos",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idProducto\": 1,\n  \"idCategoria\": 1,\n  \"idMarca\": 1,\n  \"nombre\": \"Laptop Lenovo\",\n  \"sku\": \"LEN-001\",\n  \"precio\": 750,\n  \"estado\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/Productos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Productos",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Productos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/Productos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "Productos",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Inventario",
+      "item": [
+        {
+          "name": "Listar Bodegas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/Bodegas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Bodegas"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Bodegas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/Bodegas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Bodegas",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Bodegas",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idBodega\": 0,\n  \"nombre\": \"Bodega Norte\",\n  \"ciudad\": \"Quito\",\n  \"direccion\": \"Av. Amazonas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/Bodegas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Bodegas"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Bodegas",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idBodega\": 1,\n  \"nombre\": \"Bodega A ACTUALIZACION\",\n  \"ciudad\": \"Quito\",\n  \"direccion\": \"Av. Amazonas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/Bodegas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Bodegas",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Bodegas",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/Bodegas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Bodegas",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Existencias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/Existencias",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Existencias"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Existencias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/Existencias/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Existencias",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Existencias",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idExistencia\": 0,\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"stock\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/Existencias",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Existencias"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Existencias",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idExistencia\": 1,\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"stock\": 500\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/Existencias/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Existencias",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Existencias",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/Existencias/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "Existencias",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar MovimientosInventario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/MovimientosInventario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "MovimientosInventario"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID MovimientosInventario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/MovimientosInventario/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "MovimientosInventario",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear MovimientosInventario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idMovimiento\": 0,\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"tipo\": \"Entrada\",\n  \"cantidad\": 10,\n  \"fecha\": \"2026-11-09T18:00:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/MovimientosInventario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "MovimientosInventario"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar MovimientosInventario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idMovimiento\": 1,\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"tipo\": \"Entrada\",\n  \"cantidad\": 100,\n  \"fecha\": \"2026-11-09T18:00:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/MovimientosInventario/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "MovimientosInventario",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar MovimientosInventario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/MovimientosInventario/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "MovimientosInventario",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar ReservasStock",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/ReservasStock",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "ReservasStock"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID ReservasStock",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/ReservasStock/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "ReservasStock",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear ReservasStock",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idReserva\": 0,\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"cantidad\": 5,\n  \"estado\": \"Pendiente\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/ReservasStock",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "ReservasStock"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar ReservasStock",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idReserva\": 1,\n  \"idProducto\": 1,\n  \"idBodega\": 1,\n  \"cantidad\": 2,\n  \"estado\": \"Pendiente\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5002/api/ReservasStock/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "ReservasStock",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar ReservasStock",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5002/api/ReservasStock/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "ReservasStock",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pedidos",
+      "item": [
+        {
+          "name": "Listar Clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/Clientes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Clientes"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/Clientes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Clientes",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Clientes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idCliente\": 0,\n  \"nombres\": \"Cliente de Prueba\",\n  \"cedula\": \"0123456789\",\n  \"correo\": \"cliente@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5003/api/Clientes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Clientes"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Clientes",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idCliente\": 2,\n  \"nombres\": \"Cliente de Prueba ACTUALIZACION\",\n  \"cedula\": \"0123456789\",\n  \"correo\": \"cliente@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5003/api/Clientes/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Clientes",
+                "2"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Clientes",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/Clientes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Clientes",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Pedidos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/Pedidos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Pedidos"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID Pedidos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/Pedidos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Pedidos",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Pedidos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idPedido\": 0,\n  \"idCliente\": 1,\n  \"fecha\": \"2026-11-09T18:00:00\",\n  \"total\": 150,\n  \"estado\": \"Pendiente\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5003/api/Pedidos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Pedidos"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Pedidos",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idPedido\": 1,\n  \"idCliente\": 1,\n  \"fecha\": \"2026-11-09T18:00:00\",\n  \"total\": 150,\n  \"estado\": \"Activo\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5003/api/Pedidos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Pedidos",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Pedidos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/Pedidos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "Pedidos",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar DetallesPedido",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/DetallesPedido",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "DetallesPedido"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por ID DetallesPedido",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/DetallesPedido",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "DetallesPedido"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear DetallesPedido",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idDetalle\": 0,\n  \"idPedido\": 1,\n  \"idProducto\": 1,\n  \"cantidad\": 2,\n  \"precioUnitario\": 75\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5003/api/DetallesPedido",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "DetallesPedido"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar DetallesPedido",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idDetalle\": 1,\n  \"idPedido\": 1,\n  \"idProducto\": 1,\n  \"cantidad\": 2,\n  \"precioUnitario\": 750\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5003/api/DetallesPedido/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "DetallesPedido",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar DetallesPedido",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5003/api/DetallesPedido/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5003",
+              "path": [
+                "api",
+                "DetallesPedido",
+                "1"
+              ]
+            },
+            "description": "Ajusta {{id}} y los identificadores del body a registros existentes."
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "catalogoUrl",
+      "value": "http://localhost:5001"
+    },
+    {
+      "key": "inventarioUrl",
+      "value": "http://localhost:5002"
+    },
+    {
+      "key": "pedidosUrl",
+      "value": "http://localhost:5003"
+    },
+    {
+      "key": "id",
+      "value": "1"
+    }
+  ]
+}

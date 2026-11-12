@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.slnLaunch.user
+
+# Compilaciones
+**/bin/
+**/obj/
+[Dd]ebug/
+[Rr]elease/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Base de datos local
+*.mdf
+*.ldf
+*.bak
+
+# Credenciales
+.env
+.env.*
+**/appsettings.Development.json
